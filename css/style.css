@@ -1,0 +1,39 @@
+
+
+.logo_1{
+    background-color: orange;
+    width: 100px;
+    height:100px ;
+}
+.head{
+    
+    width: 100px;
+     height: auto;
+}
+.container_1{
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    justify-content: space-around
+    }
+        
+   .text{
+    border-radius: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+   }     
+   .table_work{
+    border: 1px solid black;
+  border-collapse: collapse;
+  background-color: greenyellow;
+  }
+  .QAR{
+    border-radius: 1px solid blue;
+  }    
+  footer{
+    background-color: grey;
+  }
+  .d-grid_gap-2_d-md-block{
+    background-color: orangered;
+  }
