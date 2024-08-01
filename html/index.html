@@ -14,57 +14,99 @@
     <div class="container_1">
 
     <div class="text">
-<img class='logo'src='img/logo.png' alt=""width="50" height="50">
+<img class='logo_1'src='img/logo.png' alt=""width="50" height="50">
    <p class="text" href="">головна</a></p>
    <p class="text">товари</p>
    <p class="text">графік роботи</p>
     </div>
     <div class="container">
       <input placeholder="пошук" class="js-search" type="text">
-      
+       
+      <img width="50" height="50" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+    
     </div>
    <div class="d-grid_ gap-2_ d-md-block">
+
    <button class="btn">корзина</button>
    <button class="btn">увійти</buttons>
    </div>
    </div>
 </div>
    </header> 
-
-   </div>
-   <div class="QAR">
-<h1>Наш viеber канал:</h1>
-<p>Дізнайтеся про новинки у "SONECHKO"</p>
-<img src="QAR.png"/>
-   </div>
-
-   <div>
-    <h1>Про нас</h1>
-    <p></p>
-   </div>
-    <h1>Товари:</h1>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вхід</h2>
+            <form>
+                <label for="username">Логін:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Увійти</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+   <div class="QAR">
+<h1 class="text_2">Наш viеber канал:</h1>
+<p class="text_2">Дізнайтеся про новинки у "SONECHKO"</p>
+<img class="qar" src="QAR.png"/>
+   </div>
+
+   <div class="about_us">
+    <img src=""/>
+    <div class="us">
+    <h1>Про нас</h1>
+    <p>уамммммммммммммммммммммммммммммммммммммм</p>
+    </div>
+   </div>
+   <div class="goods">
+    <h1>Товари:</h1>
+    </div>
     <div class="card">
-        <img src="26.jpg"/>
+        <img class="card_img" src="26.jpg"/>
+        <div class="text_card">
         <h3>кофта дівч</h3>
         <h3>650.00₴</h3>
-        <button>у кошик</button>
+        </div>
+        <button class="card_btn">у кошик</button>
     </div>
     
-    <div >
-        <img src="card.jpg"/>
+    <div class="card">
+        <img class="card_img"src="card.jpg"/>
         <h3>штани дівч</h3>
         <h3>250.00₴</h3>
-        <button>купити</button>
+        <button class="card_btn">купити</button>
     </div>
-    <div >
-      <img src="card.jpg"/>
+    <div class="card">
+      <img class="card_img"src="card.jpg"/>
       <h3>штани дівч</h3>
       <h3>250.00₴</h3>
       <button class="card_btn">купити</button>
   </div>
-
+</div>
+<div class="table">
     <h1>Графік роботи</h1>
+</div>
     <table class="table_work" style="width:100%">
         <tr>
           <td>пн</td>
@@ -109,7 +151,7 @@
     <script src="skript/csrt.js"></script>
     <footer>
         <div class="footer">
-        <img src="img/logo.png"/>
+        <img class="logo_1" src="img/logo.png"/>
         <p>+380-973-738-844</p>
         </div>
     </footer>

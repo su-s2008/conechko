@@ -1,10 +1,8 @@
 
 
 .logo_1{
-    background-color: orange;
-   max-width: 100px;
-    height:80px ;
-    
+  
+    border-radius: 10px 20px 30px 40px;
 }
 .head{
     
@@ -27,12 +25,10 @@
 flex-direction:space-between ;
   align-items: center;
   gap: 3rem;
-color:#1CB0F6;
+color:#4b34fc;
 }
 
-.logo {
-  margin-right: 15px;
-}
+
 
 .menu-item {
   margin: 0;
@@ -45,17 +41,27 @@ color:#1CB0F6;
 }
 
 .btn {
-  padding: 5px 10px;
-  border: none;
-  background-color: #007bff;
+  background-color: #007bff; /* Початковий колір */
   color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease; /* Плавний перехід */
+  margin: 5px;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
+.btn:hover {
+  background-color: #0056b3; /* Колір при наведенні */
+  transform: scale(1.1); /* Збільшення при наведенні */
+}
+
+.d-grid_ {
+  display: flex;
+  gap: 10px; /* Відстань між кнопками */
+  justify-content: center; /* Вирівнювання по центру */
+  flex-wrap: wrap; /* Розташування кнопок у ряд або стовпчик */
 }
    .table_work{
     border: 1px solid black;
@@ -63,7 +69,7 @@ color:#1CB0F6;
   background-color: greenyellow;
   }
   .QAR{
-    border-radius: 1px solid blue;
+  
     background-color: greenyellow;
     padding-top: 10px;
     padding-left: 10px;
@@ -71,7 +77,12 @@ color:#1CB0F6;
     padding-bottom: 150px;
     margin: auto;
     margin-top: 20px;
-    
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 30px 40px;
+  
+  
   }    
   footer{
     background-color: grey;
@@ -143,3 +154,527 @@ color:#1CB0F6;
    .btn:active {
     padding-bottom: 10px;
    }
+    
+   .text_2{
+    text-align: center;
+    padding: auto;
+    margin-left: 50px;
+    
+   }
+   .js-search{
+    border-radius: 10px 10px 10px 10px;
+   }
+   .about_us{
+    background-color: #1CB0F6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   }
+   .us{
+    text-align:center;
+    margin-bottom: 20px;
+    align-items: center;
+   }
+   .goods{
+    display: flex;
+    justify-content: center; /* Горизонтальне центрування */
+    align-items: center;     
+   }
+   .card{
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    margin: 10px; /* Відстань між картками */
+    
+   }
+   .card_btn {
+    background: linear-gradient(45deg, #ffa500, #ff4500); /* Градієнтний фон */
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    height: 45px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Плавний перехід */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /* Всі літери великі */
+    text-decoration: none; /* Забирає підкреслення, якщо це посилання */
+    margin-left: 50px;
+}
+
+.card_btn:hover {
+    background: linear-gradient(45deg, #ff4500, #ffa500); /* Зміна градієнта при наведенні */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Більша тінь при наведенні */
+    transform: scale(1.05); /* Легке збільшення при наведенні */
+}
+
+   
+   .card_img{
+    width: 170px;
+    height: 200px;
+   }
+   .text_card{
+    margin-right:50px ;
+   }
+   .table_work{
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+  }
+
+  .table_work th, .table_work td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+  }
+
+  .table_work th {
+      background-color: #4CAF50;
+      color: white;
+      text-transform: uppercase;
+  }
+
+  .table_work tr:nth-child(even) {
+      background-color: #f2f2f2;
+  }
+
+  .table_work tr:hover {
+      background-color: #ddd;
+  }
+
+  .table_work-container {
+      background-color: #e0f7fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+   .table{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  text-align: center;
+   }
+   .footer {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #00aced;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-icons a:hover {
+    color: #00aced;
+}
+.modal_content{
+  border-radius: 1px solid black;
+}
+
+
+  .login-button, .register-button {
+      
+     
+  background-color: #4CAF50;
+      
+     
+  border: none;
+      color: white;
+      padding: 15px 32px;
+      
+     
+  text-align: center;
+      
+     
+  text-decoration: none;
+      
+     
+  display: inline-block;
+      
+     
+  font-size: 16px;
+      margin-top: 20px;
+      
+     
+  cursor: pointer;
+      border-radius: 12px;
+      
+     
+  transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .login-button:hover, .register-button:hover {
+      
+     
+  background-color: #45a049;
+      
+     
+  transform: scale(1.05);
+  }
+  
+  /* Modal Styles */
+  .modal {
+      
+     
+  display: none;
+      
+     
+  position: fixed;
+      
+      
+  
+     
+  z-index: 1;
+      left: 0;
+      top: 0;
+      
+     
+  width: 100%;
+      
+  
+    
+  height: 100%;
+      
+    
+  
+     
+  overflow: auto;
+      
+    
+  
+     
+  background-color: rgba(0, 0, 0, 0.4);
+      
+     
+  justify-content: center;
+      
+      
+  align-items: center;
+  }
+  
+  .modal_content {
+      
+     
+  background-color: #fefefe;
+      margin: 15% auto;
+      
+     
+  padding: 20px;
+      
+     
+  border: 1px solid #888;
+      
+     
+  width: 80%;
+      
+     
+  max-width: 400px;
+      
+     
+  border-radius: 10px;
+      
+      
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      
+      
+  
+     
+  position: relative;
+  }
+  
+  .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  
+   
+  cursor: pointer;
+  }
+  
+  
+  
+  .close:hover, .close:focus {
+      
+      
+  color: black;
+      
+      
+  
+      
+  
+      
+  
+      
+  text-decoration: none;
+      
+      
+  
+    
+  cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  form {
+      
+      
+  
+      
+  
+   
+  display: flex;
+      
+      
+  
+     
+  flex-direction: column;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  label {
+      
+      
+  
+      
+  
+   
+  margin-bottom: 10px;
+      
+      
+  
+     
+  font-size: 1rem;
+      color: #333;
+  }
+  
+  input {
+      padding: 10px;
+      
+     
+  margin-bottom: 20px;
+      border: 1px solid #ccc;
+      
+     
+  border-radius: 5px;
+      
+     
+  font-size: 1rem;
+  }
+  
+  button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      
+     
+  border: none;
+      padding: 10px;
+      font-size: 1rem;
+      
+     
+  cursor: pointer;
+      
+     
+  border-radius: 5px;
+      
+     
+  transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+      
+     
+  background-color: #45a049;
+      
+     
+  transform: scale(1.05);
+  }
+  
+  .switch_modal {
+      margin-top: 20px;
+      
+     
+  font-size: 0.9rem;
+  }
+  .switch_modal a { 
+  color: #4CAF50; 
+  text-decoration: none; 
+  font-weight: bold;
+  }
+  .switch_modal a:hover {
+  text-decoration: underline;
+  }
+  @media (max-width: 600px) {  
+  h1 {   
+  font-size: 2rem;
+      } 
+      }
+  p {
+          font-size: 1.25rem;
+      }
+  
+  .login-button, .register-button {
+  padding: 12px 24px;
+  font-size: 14px;
+      }
+      #btn {
+        background-color: #00aaff;
+        color: #000000;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    #btn:hover {
+        background-color: #0088cc;
+    }
+    
+    #btn:active {
+        background-color: #005f99;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 10px;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+
+    .header{
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 9%;
+      background: #fff;
+      box-shadow: var(--box-shadow);
+  }
+  
+  .header .logo{
+      font-size: 2.5rem;
+      font-weight: bolder;
+      color: #222;
+  }
+  
+  .header .logo i{
+      color: var(--color);
+  }
+  
+  .header .container_1 a{
+      font-size: 1.7rem;
+      margin: 0 1rem;
+      color: #222;
+  }
+  
+  .header .container_1 a.active{
+      color: var(--color);
+  }
+  
+  .header .container_1 a:hover{
+      color: var(--color);
+  }
+  
+  .header .icons div{
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.5rem;
+      border: .1rem solid var(--color);
+      color: var(--color);
+      border-radius: .5rem;
+      font-size: 2rem;
+      margin-left: .3rem;
+      cursor: pointer;
+      text-align: center;
+  }
+  
+  .header .icons div:hover{
+      background: var(--color);
+      color: #fff;
+  }
+  
