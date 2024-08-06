@@ -1,0 +1,189 @@
+/* Основні стилі для всієї сторінки */
+/* Основні стилі для всієї сторінки */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 360px;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    padding: 10px 20px;
+    background: #007BFF;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 0 10px;
+}
+
+.form-toggle button:hover {
+    background: #0056b3;
+}
+
+.forms {
+    position: relative;
+}
+
+.form-content {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-content h2 {
+    margin: 0 0 20px;
+    color: #007BFF;
+    text-align: center;
+}
+
+.form-content input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-content button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-content button:hover {
+    background: #0056b3;
+}
+/* Основні стилі для всієї сторінки */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 360px;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.forms {
+    position: relative;
+}
+
+.form-content {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-content h2 {
+    margin: 0 0 20px;
+    color: #007BFF;
+    text-align: center;
+}
+
+.form-content input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-content button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-content button:hover {
+    background: #0056b3;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
