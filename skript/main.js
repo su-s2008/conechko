@@ -166,5 +166,23 @@ const openLoginBtn = document.getElementById('openLoginBtn');
             alert("Вхід здійснено!");
             modal.style.display = "none";
         }
+       
+        
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const logo = document.getElementById('logo');
+            const originalSrc = logo.src;
+            const hoverSrc = 'hover_logo.png'; // The path to the image you want to show on hover
+        
+            logo.addEventListener('mouseover', () => {
+                logo.src = hoverSrc;
+            });
+        
+            logo.addEventListener('mouseout', () => {
+                logo.src = originalSrc;
+            });
+        });
         
         
