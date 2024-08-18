@@ -1,0 +1,204 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./detailsStyle.css" />
+        <!-- font awesome cdn link  -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+      </head>
+      <body>
+        <div id="clother-details">
+          <h1>Loading.....</h1>
+        </div>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const cardId = params.get("id");
+      const cardDetailsContainer = document.getElementById("clother-details");
+      const cardData = {
+        shirt: {
+          title: "One Life Graphic T-shirt",
+          description:
+            "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+          images: [
+            " ../img/26.jpg ",
+            "../img/card.jpg",
+            "./images/product1.png",
+          ],
+          price: "121",
+          sizes: ["Small", "Medium", "Large"],
+          reviews: [
+            "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+            "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.",
+            "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
+          ],
+        },
+        cardigan: {
+          title: "Sunny Yellow Sweater",
+          description:
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ",
+          images: [
+            "./images/product2_1.jpg",
+            "./images/product2_2.jpg",
+            "./images/product2.png",
+            "./images/product2.png",
+          ],
+          price: "85",
+          sizes: ["Small", "Large", "X-Large"],
+          reviews: [
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!",
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.",
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.",
+          ],
+        },
+        jeans: {
+          title: "Classic Women's Jeans",
+          description:
+            "These classic women's jeans are designed to provide both style and comfort. Made from high-quality denim, they offer a perfect fit with a flattering silhouette. Whether you're dressing up or down, these jeans are versatile enough for any occasion. The timeless design ensures they'll be a staple in your wardrobe for years to come.",
+          images: [
+            "./images/product3.png",
+            "./images/product3_2.jpg",
+            "./images/product3.png",
+            "./images/product3_1.jpg",
+          ],
+          price: "195",
+          sizes: ["Medium", "Large"],
+          reviews: [
+            "These jeans fit perfectly and are incredibly comfortable. The quality of the denim is fantastic, and they hold their shape well even after multiple washes.",
+            "I love the classic look and feel of these jeans. They are well-made and versatile, making them a great addition to my wardrobe.",
+            "The fit of these jeans is just right. They are flattering and comfortable, and I appreciate the attention to detail in the design.",
+          ],
+        },
+      };
+
+      if (cardData[cardId]) {
+        const card = cardData[cardId];
+        const priceWithTax = parseFloat(card.price) + 20;
+        cardDetailsContainer.innerHTML = `
+
+    <header class="header">
+      <a href="#" class="logo"> <i class="fas fa-bag-shopping"></i>Store </a>
+
+      <nav class="navbar">
+        <a class="home_btn" href="#home">Home</a>
+        <a href="#product">Product</a>
+        <a href="#featured">Featured</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+        <main class="main">
+          <div class="card">
+          <div class="images-container">
+                <div class="small-images">
+                  ${card.images
+                    .slice(0, 3)
+                    .map((img) => `<img src="${img}" alt="${card.title}"/>`)
+                    .join("")}
+                </div>
+                <div class="large-image">
+                  <img src="${card.images[3]}" alt="${card.title}" />
+                </div>
+              </div>
+          <div class="details">
+          <h1>${card.title}</h1>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="price">Price: $${
+            card.price
+          }<span>$${priceWithTax}</span></p>
+          <p class="desc">${card.description}</p>
+          <hr class="line"/>
+          <p class="color_title">Select Colors</p>
+          <div class="colors">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+          </div>
+          <hr class="line"/>
+          <p class="size_title">Choose Size</p>
+          <div class="sizes">
+            ${card.sizes
+              .slice(0, 3)
+              .map((c) => `<div class="">${c}</div>`)
+              .join("")}
+          </div>
+          <hr class="line"/>
+          <button class="buy_btn">Add to Card</button>
+          </div>
+          </div>
+          <hr class="line"/>
+          <h2>All Reviews</h2>
+          <div class="reviews">
+            ${card.reviews
+              .slice(0, 3)
+              .map((c) => `<div class="review">${c}</div>`)
+              .join("")}
+            </div>
+          </main>
+          <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3><i class="fas fa-bag-shopping"></i> Store</h3>
+        <p>
+          We have clothes that suits your style and which you’re proud to
+          wear. <br />From women to men.
+        </p>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#" class="link"> home</a>
+        <a href="#" class="link"> product</a>
+        <a href="#" class="link"> feature</a>
+        <a href="#" class="link"> blog</a>
+        <a href="#" class="link"> contact</a>
+      </div>
+
+      <div class="box">
+        <h3>useful links</h3>
+        <a href="#" class="link"> help center</a>
+        <a href="#" class="link"> ask questions</a>
+        <a href="#" class="link"> send feedback</a>
+        <a href="#" class="link"> privacy policy</a>
+        <a href="#" class="link"> terms of use</a>
+      </div>
+
+      <div class="box">
+        <h3>useful links</h3>
+        <a href="#" class="link"> help center</a>
+        <a href="#" class="link"> ask questions</a>
+        <a href="#" class="link"> send feedback</a>
+        <a href="#" class="link">privacy policy</a>
+        <a href="#" class="link">terms of use</a>
+      </div>
+    </div>
+
+          `;
+      } else {
+        cardDetailsContainer.innerHTML = `<h1>Товар не знайдено</h1>`;
+      }
+    });
+    </scrpt>
+    <script src="../skript/card.js"
+</body>
+</html>

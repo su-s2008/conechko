@@ -185,4 +185,21 @@ const openLoginBtn = document.getElementById('openLoginBtn');
             });
         });
         
+
+        //функціонал  пошуку товарів
+        document.addEventListener("DOMContentLoaded ", function(){
+           const searchref = document.getElementById("searchref");
+           const searchInput = document.getElementById("searchInput")
+           const Cards = document.querySelector(".card")
+
+           Cards.forEach(function(card) 
+        {
+            card.addEventListener("click" ,function(){
+                const cardId = card.qetAttribute("data-id")
+                
+            })
+        })
+        });
+
+    
         

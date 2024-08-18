@@ -1,189 +1,201 @@
-/* Основні стилі для всієї сторінки */
-/* Основні стилі для всієї сторінки */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+@import url('https://font.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+    min-height: 100vh;
+    background-color: black;
 
-.container {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 360px;
-    max-width: 100%;
-    padding: 20px;
 }
-
-.form-toggle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.form-toggle button {
-    padding: 10px 20px;
-    background: #007BFF;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin: 0 10px;
-}
-
-.form-toggle button:hover {
-    background: #0056b3;
-}
-
-.forms {
+.wraper{
     position: relative;
+    width: 750px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid #0ef;
+    box-shadow: 0 0 25px rgb(10, 232, 69);
+    overflow: hidden;
 }
+.wraper .form-box{
+position: absolute;
+top:0;
+width: 50%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.wraper .form-box.login-btn{
+    left: 0;
+    padding: 0 60px  0 40px;
+    display: none;
+}
+.wraper .form-box.register {
+right: 0;
+padding: 0 60px 0 40px;
 
-.form-content {
-    padding: 20px;
+}
+.form-box .input-box{
+    position: relative;
     width: 100%;
-    box-sizing: border-box;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    height: 50px;
+margin: 25px 0;
+}
+.input-box input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+padding-right: 23px;
+font-size: 16px;
+color: #fff;
+font-weight: 500;
+
+border-radius: 10px 10px 10px 10px;
+transition: .5s;
+
+
+}
+.input-box input:focus,
+    .input-box input:valid{
+        border-bottom-color:#0ef ;
+        
+    }
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+
 }
 
-.hidden {
-    opacity: 0;
-    transform: translateX(-100%);
+
+.input-box input:focus~label
+    .input-box input:valid~label{
+        top: -5px;
+        color: #fff;
+        
+    }
+.input-box i{
     position: absolute;
-    top: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: black;
+    transition: .5s;
+}
+
+
+.input-box input:focus~i
+    .input-box input:valid~i{
+color: #fff;
+        
+    }
+.btns{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color:#fff ;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+
+}
+.btns::before{
+    content: '';
+    position: absolute;
+    top: -100%;
     left: 0;
     width: 100%;
+    height: 300%;
+    background: linear-gradient(black, rgb(4, 252, 28),black,rgb(21, 245, 5));
+    z-index: -1;
+    transition: .5s;
 }
-
-.visible {
-    opacity: 1;
-    transform: translateX(0);
+.btns:hover:before{
+top: 0;
 }
-
-.form-content h2 {
-    margin: 0 0 20px;
-    color: #007BFF;
+.form-box .logreg-link{
+    font-size: 14.5px;
+    color: black;
     text-align: center;
+    margin: 20px 0 10px;
 }
-
-.form-content input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.form-content button {
-    width: 100%;
-    padding: 10px;
-    background: #007BFF;
-    border: none;
+.logreg-link p a {
     color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.form-content button:hover {
-    background: #0056b3;
-}
-/* Основні стилі для всієї сторінки */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 360px;
-    max-width: 100%;
-    padding: 20px;
-}
-
-.forms {
-    position: relative;
-}
-
-.form-content {
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateX(-100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.form-content h2 {
-    margin: 0 0 20px;
-    color: #007BFF;
-    text-align: center;
-}
-
-.form-content input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.form-content button {
-    width: 100%;
-    padding: 10px;
-    background: #007BFF;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.form-content button:hover {
-    background: #0056b3;
-}
-
-.message {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.message a {
-    color: #007BFF;
     text-decoration: none;
+    font-weight: 600;
+}
+.logreg-link p a:hover {
+    text-decoration: underline;
+
 }
 
-.message a:hover {
-    text-decoration: underline;
+.wraper .info-text{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wraper .info-text.login{
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+    display: none;
+}
+.info-text h2{
+    font-size: 36px;
+    color: #fff;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+.info-text p{
+    font-size: 16px;
+    color: #fff;
+}
+.wraper .bg-animate{
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 850px;
+    height: 600px;
+    background: linear-gradient(45deg, #081b29,#0ef);
+    border-bottom: 3px solid #0ef;
+    transform: rotate(0) skewY(0);
+    transform-origin: bottom right;
+}
+.wraper .bg-animate2{
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 700px;
+    background: black;
+    border-top: 3px solid #0ef;
+    transform: rotate(-11deg) skewY(-40deg);
+    transform-origin: bottom left;
 }

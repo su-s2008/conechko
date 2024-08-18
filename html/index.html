@@ -13,6 +13,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 </head>
 <body>
     
@@ -53,12 +55,10 @@
    
    <a href="#" class="text">графік роботи</p>
     </div>
-    <div class="container">
-      <input placeholder="пошук" class="js-search" type="text">
-       <button class="search-buton">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-    </div>
+    <from id="searchref"class="d-flex mx-auto" role="search">
+      <input id="searchInput" class="form-control me-2" type="search" placeholder="пошук" aria-label="search">
+      <button class="btn btn-outline-secondary btn-search" type="submit">hhhg</button>
+    </from>
    <div class="container_2">
 
    <button  class="btn">
@@ -198,15 +198,11 @@
           <li>Спеціальні пропозиції та знижки</li>
       </ul>
   </section>
-
-  <section class="contact-info">
-      <h2>Контактна Інформація</h2>
-      <p>Телефон: <a href="tel:+380123456789">+38 012 345 67 89</a></p>
-      <p>Електронна пошта: <a href="mailto:support@kidsstore.com">support@kidsstore.com</a></p>
-      <p>Адреса: вул. Дитяча, 10, Київ, Україна</p>
-  </section>
-</div>
-<footer>
+  <section id="reviews">
+    <h2>Відгуки</h2>
+    <p>Наші клієнти завжди залишаються задоволені! Ось кілька відгуків про наш магазин.</p>
+</section>
+ 
 
 <!-- Модальне вікно для входу -->
 <div id="loginModal" class="modal">
